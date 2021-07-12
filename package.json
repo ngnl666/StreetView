@@ -1,0 +1,31 @@
+{
+  "name": "streetview",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.12.1",
+    "bootstrap": "^5.0.2",
+    "node-sass": "^6.0.1",
+    "sass": "^1.35.2",
+    "sass-loader": "^12.1.0",
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.10",
+    "vue3-google-map": "^0.8.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.4",
+    "@vue/cli-plugin-router": "^5.0.0-beta.2",
+    "@vue/compiler-sfc": "^3.0.5",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.30.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.13.0",
+    "prettier": "^2.3.2",
+    "vite": "^2.4.0"
+  }
+}
