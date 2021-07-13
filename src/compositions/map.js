@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
 import { ref, reactive, onMounted } from "vue";
 import { Loader } from "@googlemaps/js-api-loader";
+import { API_KEY } from "../../api";
 
-const API_KEY = "AIzaSyDFkrcN56LtUIPy-XN5YMs91feRs2aZURs";
 const loader = new Loader({ apiKey: API_KEY });
 let map = ref(null);
 let marker = ref(null);
@@ -56,7 +56,7 @@ export const findPlace = (place) => {
 
 export async function renderView(addr) {
   let res = await fetch(
-    `https://maps.googleapis.com/maps/api/streetview/metadata?size=600x300&location=${addr}&heading=-45&pitch=42&fov=110&key=AIzaSyDFkrcN56LtUIPy-XN5YMs91feRs2aZURs`
+    `https://maps.googleapis.com/maps/api/streetview/metadata?size=600x300&location=${addr}&heading=-45&pitch=42&fov=110&key=${API_KEY}`
   );
   let data = await res.json();
 
@@ -65,7 +65,7 @@ export async function renderView(addr) {
       "https://i.postimg.cc/k5mzx07M/BB6-C4-A4-D-764-A-44-AA-9-CC5-899-BD6-F0836-E.jpg";
     return;
   }
-  imageUrl.value = `https://maps.googleapis.com/maps/api/streetview?size=450x580&location=${addr}&heading=90&pitch=-0.76&key=AIzaSyDFkrcN56LtUIPy-XN5YMs91feRs2aZURs`;
+  imageUrl.value = `https://maps.googleapis.com/maps/api/streetview?size=450x580&location=${addr}&heading=90&pitch=-0.76&key=${API_KEY}`;
 }
 
 export const changeAngle = (url, v) => {

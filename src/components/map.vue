@@ -35,6 +35,7 @@
 
 <script>
 import { ref, watch } from "@vue/runtime-core";
+import { API_KEY } from "../../api";
 import {
   mapInit,
   findPlace,
@@ -55,7 +56,7 @@ export default {
     mapInit(mapDiv);
 
     watch(myLatlng, (v) => {
-      imageUrl.value = `https://maps.googleapis.com/maps/api/streetview?size=450x580&location=${v.lat},${v.lng}&heading=90&pitch=20&key=AIzaSyDFkrcN56LtUIPy-XN5YMs91feRs2aZURs`;
+      imageUrl.value = `https://maps.googleapis.com/maps/api/streetview?size=450x580&location=${v.lat},${v.lng}&heading=90&pitch=20&key=${API_KEY}`;
     });
 
     watch(myAddress, (v) => renderView(v));
